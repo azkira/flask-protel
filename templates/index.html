@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <div class="center">
+                <p>Insert your audio file here</p>
+                <form method="post" action="/" enctype="multipart/form-data">
+                    <dl>
+                        <p>
+                            <input type="file" name="file" id="browse" hidden>
+                            <label for="browse">Input Audio</label>
+                        </p>
+                    </dl>
+                    <dl>
+                        <p>
+                            <input type="submit" value="Submit" class="button" onclick="showToast()">
+                        </p>
+                        <div id="toast">
+                            file has been submitted
+                        </div>
+                    </dl>
+                </form>
+            </div>
+        </div>
+        <script>
+            function showToast() {
+                var x = document.getElementById("toast");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+body {
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+}
+
+p {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.container {
+  border-radius: 20px;
+  padding: 80px;
+  height: 100px;
+}
+
+.center {
+  padding: 30px;
+}
+
+label {
+  background-color: chocolate;
+  border: none;
+  color: white;
+  padding: 30px 0px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: 4px 2px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+  background-color: chocolate;
+  border: none;
+  color: white;
+  padding: 30px 0px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  margin: 4px 2px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#toast {
+  visibility: hidden;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
